@@ -1,0 +1,13 @@
+version: '3.3'
+
+services:
+  pigbelly:
+    container_name: pigbelly
+    build: .
+    networks:
+      - 'nginx-mgr_default'
+    restart: unless-stopped
+
+networks:
+  nginx-mgr_default:
+    external: true
