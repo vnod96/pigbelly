@@ -23,4 +23,4 @@ jobs:
           name: id_rsa
           known_hosts: ${{ secrets.KH }}
       - name: rsync over ssh
-        run: 'curl ifconfig.me'
+        run: 'ssh bwolf@pigbelly.duckdns.org "curl ifconfig.me"'
