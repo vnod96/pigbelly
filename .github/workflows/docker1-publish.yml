@@ -21,5 +21,6 @@ jobs:
         with:
           key: ${{ secrets.KK }}
           name: id_rsa
+          known_hosts: ${{ secrets.KH }}
       - name: rsync over ssh
         run: 'curl ifconfig.me'
